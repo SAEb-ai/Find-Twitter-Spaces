@@ -1,0 +1,13 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Find Twitter Spaces",
+  "main": "filterTwitterSpaces.js",
+  "scripts": {
+    "lint-server": "eslint filterTwitterSpaces.js",
+    "lint-server-fix": "eslint filterTwitterSpaces.js --fix",
+    "format-server-fix": "prettier --write filterTwitterSpaces.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
