@@ -4,10 +4,10 @@
   "description": "Find Twitter Spaces",
   "main": "filterTwitterSpaces.js",
   "scripts": {
-    "dev": "nodemon filterTwitterSpaces.js",
-    "lint-server": "eslint filterTwitterSpaces.js",
-    "lint-server-fix": "eslint filterTwitterSpaces.js --fix",
-    "format-server-fix": "prettier --write filterTwitterSpaces.js"
+    "dev": "nodemon src/filterTwitterSpaces.js",
+    "lint-server": "eslint src/filterTwitterSpaces.js",
+    "lint-server-fix": "eslint src/filterTwitterSpaces.js --fix",
+    "format-server-fix": "prettier --write src/filterTwitterSpaces.js"
   },
   "author": "",
   "license": "ISC",
