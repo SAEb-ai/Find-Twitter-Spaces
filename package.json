@@ -4,6 +4,8 @@
   "description": "Find Twitter Spaces",
   "main": "index.js",
   "scripts": {
+    "frontend": "cd client && npm run start",
+    "server": "cd server && npm run dev",
     "lint": "concurrently \"cd client && npm run lint-client\" \"cd server && npm run lint-server\"",
     "lint-fix": "concurrently \"cd client && npm run lint-client-fix\" \"cd server && npm run lint-server-fix\"",
     "format-fix": "concurrently \"cd client && npm run format-client-fix\" \"cd server && npm run format-server-fix\"",
@@ -29,14 +31,11 @@
   "homepage": "https://github.com/SAEb-ai/Find-Twitter-Spaces#readme",
   "devDependencies": {
     "concurrently": "^7.2.2",
-    "eslint": "^8.19.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "react-scripts": "^4.0.1"
   }
 }

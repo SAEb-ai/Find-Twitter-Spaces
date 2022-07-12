@@ -1,12 +1,7 @@
 module.exports = {
-  settings: {
-    react: {
-        version: require('./package.json').dependencies.react,
-    },
-  },
   env: {
     browser: true,
-    es2021: true,
+    es2020: true,
     jest: true,
   },
   extends: [
@@ -19,10 +14,12 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 12,
+    sourceType: 'module',
   },
-  plugins: ["react"],
+  plugins: [
+    'react',
+  ],
   rules: {
     "react/react-in-jsx-scope": "off",
   },
