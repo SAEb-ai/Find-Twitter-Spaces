@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { TextField } from "@mui/material";
-import { useStyles } from "./SearchTwitterSpaces.style.js";
+import { UserContext } from "../../App";
+import useStyles from "./SearchTwitterSpaces.style";
 
 export default function SearchTwitterSpaces() {
+  const { dispatch } = useContext(UserContext);
   const classes = useStyles();
   const handleSubmit = (e) => {
     if (e.key === "Enter") {
-      console.log(e.target.value);
+      dispatch({ type: "SEARCH", payload: e.target.value });
     }
   };
   return (
