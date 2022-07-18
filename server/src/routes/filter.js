@@ -6,10 +6,11 @@ var router = express.Router();
 const endpointUrl = `https://api.twitter.com/2/spaces/search`;
 const token = process.env.BEARER_TOKEN;
 
-router.post("/filter", async (req, res) => {
+router.get("/filter/:topic", async (req, res) => {
     const params = {
-      query: "Twitter",
+      query: req.params.topic,
     };
+    console.log(req.params.topic)
     const filterTwitterSpaces = await needle("get", endpointUrl, params, {
       headers: {
         "User-Agent": "v2SpacesSearchJS",
@@ -17,7 +18,7 @@ router.post("/filter", async (req, res) => {
       },
     });
     if (filterTwitterSpaces.body) {
-      res.status(201).send("Successful request");
+      res.status(201).json(filterTwitterSpaces.body);
     } else {
       res.status(424).send("Unsuccessful request");
     }
