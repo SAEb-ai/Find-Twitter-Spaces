@@ -5,8 +5,8 @@
   "main": "filterTwitterSpaces.js",
   "scripts": {
     "dev": "nodemon src/filterTwitterSpaces.js",
-    "lint-server": "eslint src/filterTwitterSpaces.js",
-    "lint-server-fix": "eslint src/filterTwitterSpaces.js --fix",
+    "lint-server": "eslint src/filterTwitterSpaces.js --max-warnings=0",
+    "lint-server-fix": "eslint src/filterTwitterSpaces.js --max-warnings=0 --fix",
     "format-server-fix": "prettier --write src/filterTwitterSpaces.js"
   },
   "author": "",

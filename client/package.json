@@ -24,8 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint-client": "eslint src --ext .jsx,.js",
-    "lint-client-fix": "eslint src --ext .jsx,.js --fix",
+    "lint-client": "eslint src --max-warnings=0 --ext .jsx,.js",
+    "lint-client-fix": "eslint src --max-warnings=0 --ext .jsx,.js --fix",
     "format-client-fix": "prettier --write src"
   },
   "eslintConfig": {

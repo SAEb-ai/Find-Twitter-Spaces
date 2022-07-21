@@ -4,11 +4,11 @@ import { UserContext } from "../../App";
 import useStyles from "./SearchTwitterSpaces.style";
 
 export default function SearchTwitterSpaces() {
-  const { dispatch } = useContext(UserContext);
+  const { setTopic } = useContext(UserContext);
   const classes = useStyles();
   const handleSubmit = (e) => {
     if (e.key === "Enter") {
-      dispatch({ type: "SEARCH", payload: e.target.value });
+      setTopic({ type: "SEARCH", payload: e.target.value });
     }
   };
   return (

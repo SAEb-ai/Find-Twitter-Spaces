@@ -1,15 +1,15 @@
 import React, { createContext, useReducer } from "react";
 import "./App.css";
 import FilterTwitterSpaces from "./pages/FilterTwitterSpaces";
-import { initialState, reducer } from "./reducer/Reducer";
+import { initialTopic, reducer } from "./reducer/Reducer";
 
 export const UserContext = createContext();
 
 export default function App() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [topic, setTopic] = useReducer(reducer, initialTopic);
   return (
     <div className="App">
-      <UserContext.Provider value={{ state, dispatch }}>
+      <UserContext.Provider value={{ topic, setTopic }}>
         <FilterTwitterSpaces />
       </UserContext.Provider>
     </div>
