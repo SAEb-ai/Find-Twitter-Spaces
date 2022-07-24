@@ -3,9 +3,12 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles({
   header: {
     fontFamily: "cursive",
-    fontSize: "3rem",
+    fontSize: "2rem",
     color: "#3ac2ff",
     marginBottom: "1rem",
+    "@media (max-width: 469px)": {
+      fontSize: "1.5rem",
+    },
   },
   search: {
     marginTop: "2vh",
