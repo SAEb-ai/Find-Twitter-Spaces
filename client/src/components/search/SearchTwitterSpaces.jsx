@@ -4,8 +4,8 @@ import { UserContext } from "../../App";
 import useStyles from "./SearchTwitterSpaces.style";
 
 export default function SearchTwitterSpaces() {
-  const { setTopic } = useContext(UserContext);
   const classes = useStyles();
+  const { setTopic } = useContext(UserContext);
   const handleSubmit = (e) => {
     if (e.key === "Enter") {
       setTopic({ type: "SEARCH", payload: e.target.value });
@@ -14,6 +14,7 @@ export default function SearchTwitterSpaces() {
   return (
     <>
       <div className={classes.search}>
+        <div className={classes.header}>Find a Twitter Space</div>
         <TextField
           label="Find Twitter Spaces"
           variant="outlined"

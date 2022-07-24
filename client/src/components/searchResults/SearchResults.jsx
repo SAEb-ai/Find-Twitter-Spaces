@@ -1,9 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
-
 import axios from "axios";
+import { Card, CardActionArea, CardContent, Typography } from "@mui/material";
 import { UserContext } from "../../App";
+import useStyles from "./SearchResults.style";
 
 export default function SearchResults() {
+  const classes = useStyles();
   const { topic } = useContext(UserContext);
   const [spaces, setSpaces] = useState([]);
   const getTwitterSpaces = async () => {
@@ -18,9 +20,28 @@ export default function SearchResults() {
 
   return (
     <>
-      {spaces.map((space) => {
-        return <div key={space.id}>{space.id}</div>;
-      })}
+      <div className={classes.displaySpaces}>
+        {spaces.map((space) => {
+          const visitTwitterSpaceUrl = `https://twitter.com/i/spaces/${space.id}`;
+          return (
+            <Card key={space.id} className={classes.dimensionsCard}>
+              <CardActionArea href={visitTwitterSpaceUrl} target="_blank">
+                <CardContent className={classes.designCard}>
+                  <Typography gutterBottom variant="h5" className={classes.designTitleCard}>
+                    {space.title}
+                  </Typography>
+                  <Typography component="p" className={classes.designDeatilsCard}>
+                    Start Time: {space.scheduled_start ? space.scheduled_start : "Not Available"}
+                  </Typography>
+                  <Typography component="p" className={classes.designDetailsCard}>
+                    Status: {space.state}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          );
+        })}
+      </div>
     </>
   );
 }

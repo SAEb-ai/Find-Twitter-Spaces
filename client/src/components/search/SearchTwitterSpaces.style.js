@@ -1,8 +1,14 @@
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
+  header: {
+    fontFamily: "cursive",
+    fontSize: "3rem",
+    color: "#3ac2ff",
+    marginBottom: "1rem",
+  },
   search: {
-    marginTop: "35vh",
+    marginTop: "2vh",
   },
   labelSize: {
     fontSize: "0.93rem",
