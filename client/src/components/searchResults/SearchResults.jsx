@@ -21,26 +21,29 @@ export default function SearchResults() {
   return (
     <>
       <div className={classes.displaySpaces}>
-        {spaces.map((space) => {
-          const visitTwitterSpaceUrl = `https://twitter.com/i/spaces/${space.id}`;
-          return (
-            <Card key={space.id} className={classes.dimensionsCard}>
-              <CardActionArea href={visitTwitterSpaceUrl} target="_blank">
-                <CardContent className={classes.designCard}>
-                  <Typography gutterBottom variant="h5" className={classes.designTitleCard}>
-                    {space.title}
-                  </Typography>
-                  <Typography component="p" className={classes.designDeatilsCard}>
-                    Start Time: {space.scheduled_start ? space.scheduled_start : "Not Available"}
-                  </Typography>
-                  <Typography component="p" className={classes.designDetailsCard}>
-                    Status: {space.state}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          );
-        })}
+        {spaces
+          ? spaces.map((space) => {
+              const visitTwitterSpaceUrl = `https://twitter.com/i/spaces/${space.id}`;
+              return (
+                <Card key={space.id} className={classes.dimensionsCard}>
+                  <CardActionArea href={visitTwitterSpaceUrl} target="_blank">
+                    <CardContent className={classes.designCard}>
+                      <Typography gutterBottom variant="h5" className={classes.designTitleCard}>
+                        {space.title}
+                      </Typography>
+                      <Typography component="p" className={classes.designDeatilsCard}>
+                        Start Time:{" "}
+                        {space.scheduled_start ? space.scheduled_start : "Not Available"}
+                      </Typography>
+                      <Typography component="p" className={classes.designDetailsCard}>
+                        Status: {space.state}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              );
+            })
+          : "No Spaces available yet!!"}
       </div>
     </>
   );
