@@ -24,6 +24,7 @@ export default function SearchResults() {
         {spaces
           ? spaces.map((space) => {
               const visitTwitterSpaceUrl = `https://twitter.com/i/spaces/${space.id}`;
+              const startTime = space.scheduled_start;
               return (
                 <Card key={space.id} className={classes.dimensionsCard}>
                   <CardActionArea href={visitTwitterSpaceUrl} target="_blank">
@@ -32,8 +33,7 @@ export default function SearchResults() {
                         {space.title}
                       </Typography>
                       <Typography component="p" className={classes.designDeatilsCard}>
-                        Start Time:{" "}
-                        {space.scheduled_start ? space.scheduled_start : "Not Available"}
+                        Start Time: {startTime ? new Date(startTime).toString() : "Not Available"}
                       </Typography>
                       <Typography component="p" className={classes.designDetailsCard}>
                         Status: {space.state}
