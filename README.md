@@ -1,4 +1,4 @@
-![Find-Twitter-Spaces](https://socialify.git.ci/SAEb-ai/Find-Twitter-Spaces/image?description=1&descriptionEditable=Find%20Twitter%20Spaces%20of%20your%20choice&language=1&logo=https%3A%2F%2Ffind-twitter-spaces.herokuapp.com%2Ffavicon.ico&name=1&owner=1&theme=Light)
+![Find-Twitter-Spaces](https://socialify.git.ci/SAEb-ai/Find-Twitter-Spaces/image?language=1&owner=1&name=1&stargazers=1&theme=Light)
 
 <p align="center">
 <img src="https://img.shields.io/github/license/SAEb-ai/Find-Twitter-Spaces" />
