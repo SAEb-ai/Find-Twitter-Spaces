@@ -10,7 +10,7 @@ export default function SearchResults() {
   const [spaces, setSpaces] = useState([]);
   const getTwitterSpaces = async () => {
     if (topic != null) {
-      const results = await axios.get(`/filter/${topic}`);
+      const results = await axios.get(`${process.env.REACT_APP_SERVER_BASE_URL}/filter/${topic}`);
       setSpaces(results.data.data);
     }
   };
