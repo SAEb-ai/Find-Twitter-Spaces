@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 8080;
 
 const app = express();
 
-app.use(cors({ origin: ["http://localhost:3000", "https://find-twitter-spaces.onrender.com/"] }));
+app.use(cors({ origin: ["http://localhost:3000", "https://find-twitter-spaces.onrender.com"] }));
 app.use("/", filterTwitterSpaces);
 
 // eslint-disable-next-line no-console
