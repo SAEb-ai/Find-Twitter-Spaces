@@ -63,7 +63,7 @@ npm run start
 http://localhost:3000
 ```
 
-The website is live at [http://find-twitter-spaces.herokuapp.com/](http://find-twitter-spaces.herokuapp.com/)
+The website is live at [https://find-twitter-spaces.onrender.com/](https://find-twitter-spaces.onrender.com/)
 
 ### Backend 💻
 
